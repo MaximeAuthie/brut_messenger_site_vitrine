@@ -1,8 +1,20 @@
+:root {
+    --main-max-width:1200px;
+}
+
 body {
     background-color: #FFFEF8;
+    padding: 0px;
+    margin: 0px;
+}
+.general {
+    background-color: #23A093;
 }
 
 header {
+    position: sticky;
+    z-index: 100;
+    top: 0px;
     background-color: #23A093;
     border-bottom: solid 4px;
 }
@@ -10,25 +22,41 @@ header {
 #content-header {
     display: flex;
     flex-direction: row;
-    width: 1200px;
-    height: 130px;
+    width: var(--main-max-width);
+    height: 110px;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #content-body {
-    width: 1200px;
+    display: flex;
+    width: var(--main-max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content-footer {
+    display: flex;
+    width: var(--main-max-width);
     margin-left: auto;
     margin-right: auto;
 }
 
 
-#logo {
+#logo-header {
     flex: 10%;
-    height: 130px;
+    height: 110px;
+}
+
+#logo-body {
+    display: block;
+    margin: auto;
+    border: 4px black;
+    margin-top: 10vh;
+    height: 150px;
 }
 
 #img-logo {
@@ -55,23 +83,111 @@ nav {
     justify-content: space-between;
 }
 
+nav h2 {
+    cursor: pointer;
+}
+
+section {
+    width: var(--main-max-width);
+}
+
 section:nth-child(1) {
-    margin-top: 100px;
+    margin-top: 50px;
+    position: absolute;
+    padding-bottom: 270px;
+    text-align: center;
     background-color: #FCA311;
 }
 
-section:nth-child(2) {
-    margin-top: 100px;
+#phone {
+    display: block;
+    position: relative;
+    top: 250px;
+    right: 35%;
+}
+
+section:nth-child(3) {
+    margin-top: 50px;
+    padding: 0px;
+    position: absolute;
+    top: 1000px;
+    text-align: center;
     background-color: #6B9BFA;
 }
 
+section:nth-child(4) {
+    margin-top: 50px;
+    padding: 0px;
+    position: absolute;
+    top: 2050px;
+    text-align: center;
+    background-color: #F55A4F;
+}
+
+.section-text-center {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.div-img-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.div-text-right {
+    flex: 80%;
+    text-align: end;
+    padding-right: 20px;
+}
+
+.div-text-left {
+    flex: 80%;
+    text-align: start;
+    padding-left: 20px;
+}
+
+.div-img-left {
+    position: relative;
+    flex : 20%;
+    left: -50px;
+}
+
+.div-img-right {
+    position: relative;
+    flex : 20%;
+    right: -50px;
+}
+
+
+
 section h1 {
     text-align: center;
+    margin: 0px;
+}
+
+section p {
+    margin: 0px;
+    padding-top: 30px;
+    color: white;
+    font-family: dongle;
+    font-size : 3em;
+    line-height: 40px;
+}
+
+section span {
+    font-family: BUNGEE;
+    font-size: 0.8em;
 }
 
 #inscription {
     color: #FCA311;
     font-weight: bold;
+}
+
+footer {
+    background-color: #23A093;
 }
 
 form  { /* mettre un média pour les tailles tablettes et pc */
@@ -115,6 +231,7 @@ label {
     border-radius: 5px 5px 5px 5px;
     text-align: center;
     font-family: 'Dongle', sans-serif;
+    cursor: pointer;
 }
 
 .secondary {
@@ -129,4 +246,5 @@ label {
     border-radius: 5px 5px 5px 5px;
     text-align: center;
     font-family: 'Dongle', sans-serif;
+    cursor: pointer;
 }
