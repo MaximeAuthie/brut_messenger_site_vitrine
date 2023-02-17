@@ -89,6 +89,7 @@ nav h2 {
 #content-body {
     display: flex;
     width: var(--main-max-width);
+    height: 3300px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -97,7 +98,7 @@ section {
     width: var(--main-max-width);
 }
 
-section:nth-child(1) {
+#first-section {
     margin-top: 50px;
     position: absolute;
     padding-bottom: 270px;
@@ -105,29 +106,49 @@ section:nth-child(1) {
     background-color: #FCA311;
 }
 
-#phone {
-    display: block;
-    position: relative;
-    top: 250px;
-    right: 35%;
+#phone-div {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:500px;
+    width: var(--main-max-width);
+    height: 500px;
+    z-index: 10;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-section:nth-child(3) {
+#phone {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#second-section {
     margin-top: 50px;
     padding: 0px;
     position: absolute;
-    top: 1000px;
+    top: 980px;
     text-align: center;
     background-color: #6B9BFA;
 }
 
-section:nth-child(4) {
+#third-section {
     margin-top: 50px;
     padding: 0px;
     position: absolute;
-    top: 2050px;
+    top: 1750px;
     text-align: center;
     background-color: #F55A4F;
+}
+
+#fourth-section {
+    margin-top: 50px;
+    padding: 0px;
+    position: absolute;
+    top: 2490px;
+    text-align: center;
+    background-color: #23A093;
 }
 
 .section-text-center {
@@ -158,12 +179,14 @@ section:nth-child(4) {
     position: relative;
     flex : 20%;
     left: -50px;
+    top: 10px;
 }
 
 .div-img-right {
     position: relative;
     flex : 20%;
     right: -50px;
+    top : 10px;
 }
 
 section h1 {
@@ -175,7 +198,6 @@ section p {
     margin: 0px;
     padding-top: 30px;
     color: white;
-    /* font-family: dongle; */
     font-size : 3em;
     line-height: 40px;
 }
@@ -188,13 +210,38 @@ section span {
 .legal-text {
     background-color: #FFFEF8;
     width: 100%;
-    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     font-size: 1.5em;
+    line-height: 30px;
 }
 
 .legal-text h1 {
     font-size: 1em;
     text-align: center;
+    margin-top: 50px;
+}
+
+.p-center {
+    text-align: center;
+}
+
+#badges {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+#badges img {
+    display: block;
+    margin: auto;
+    width: 60%;
 }
 
 /* FOOTER */
