@@ -1,7 +1,7 @@
 /* GENERAL */
 
 :root {
-    --main-max-width:1200px;
+    --main-max-width:1100px;
 }
 
 body {
@@ -19,6 +19,20 @@ h1 {
     font-family: BUNGEE;
 }
 
+h2 {
+    font-family: BUNGEE;
+    /* font-size: 1.5em; */
+    text-align: center;
+    line-height: 60px;
+    padding-top:30px;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
 
 /* HEADER */
 
@@ -34,7 +48,7 @@ header {
     display: flex;
     flex-direction: row;
     width: var(--main-max-width);
-    height: 110px;
+    height: 130px;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
@@ -45,7 +59,7 @@ header {
 #logo-titre {
     display: flex;
     flex-direction: row;
-    flex: 70%;
+    flex: 65%;
     justify-content: space-between;
     align-items: center;
 }
@@ -69,16 +83,15 @@ header {
 nav {
     display: flex;
     flex-direction: row;
-    flex : 30%;
+    flex : 35%;
     justify-content: space-between;
-    background-color: #6B9BFA;
     align-items: center;
 }
 
 nav a {
     /* font-family: dongle; */
     color: white;
-    font-size: 1.7em;
+    font-size: 2.5em;
     font-weight: bold;
     text-decoration: none;
     -webkit-text-stroke: 1px;
@@ -93,21 +106,20 @@ nav a {
 /* BODY */
 
 .titre-page {
-    text-align: center;
-}
-
-section h1 {
-    padding-top:20px;
     font-size: 3em;
     text-align: center;
-    margin: 0px;
+    line-height: 40px;
+    margin-bottom: 50px;
+}
 
+section h2 {
+    font-size: 3em;
 }
 
 #content-body-home {
     display: flex;
     width: var(--main-max-width);
-    height: 3300px;
+    height: 3030px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -153,7 +165,7 @@ section {
     margin-top: 50px;
     padding: 0px;
     position: absolute;
-    top: 980px;
+    top: 1020px;
     text-align: center;
     background-color: #6B9BFA;
 }
@@ -162,7 +174,7 @@ section {
     margin-top: 50px;
     padding: 0px;
     position: absolute;
-    top: 1750px;
+    top: 1730px;
     text-align: center;
     background-color: #F55A4F;
 }
@@ -171,7 +183,7 @@ section {
     margin-top: 50px;
     padding: 0px;
     position: absolute;
-    top: 2490px;
+    top: 2450px;
     text-align: center;
     background-color: #23A093;
 }
@@ -216,8 +228,6 @@ section {
     top : 10px;
 }
 
-
-
 section p {
     margin: 0px;
     padding-top: 30px;
@@ -236,16 +246,16 @@ section span {
     width: 100%;
     padding-left: 50px;
     padding-right: 50px;
-    font-size: 1.5em;
+    font-size: 1.6em;
     line-height: 30px;
     word-wrap: break-word;
 }
 
-.legal-text h1 {
+/* .legal-text h1 {
     font-size: 1em;
     text-align: center;
     margin-top: 50px;
-}
+} */
 
 .p-center {
     text-align: center;
@@ -303,6 +313,7 @@ footer a {
 #list-footer {
     flex: 80%;
     z-index: 10;
+    padding-left: 15px;
 }
 
 #social-network {
@@ -316,18 +327,19 @@ footer a {
 
 #logo-body {
     display: block;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:50px;
     border: 4px black;
-    margin-top: 5vh;
     height: 150px;
 }
 
-form  { /* mettre un média pour les tailles tablettes et pc */
+form  { 
     display: block;
     width:100%;
-    margin-top: 5vh;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px;
 }
 
 input {
@@ -352,7 +364,7 @@ textarea {
 
 label {
     padding-left: 25%;
-    line-height: 2px;
+    line-height: 0px;
     font-size: 2em;
     font-weight: bold;
 }
@@ -389,207 +401,658 @@ label {
     cursor: pointer;
 }
 
-@media screen and (max-width: 1350px) {
+/*Affichage portrait tablettes très haute résolution*/
+@media screen and (max-width: 1900px) {
     :root {
-        --main-max-width:90%;
+        --main-max-width: 85%;
     }
-
-    section {
-        width: var(--main-max-width);
+    
+    h2 {
+        font-size: 2em;
     }
-
-    form  {
-        width:100%;
+    
+    h3 {
+        font-size: 2.5em;
     }
-
-    input {
-        width: 65%;
-    }
-
-    label {
-        padding-left: 18%;
-    }
-
-    section p {
-        margin: 0px;
-        padding-top: 30px;
-        color: white;
-        font-size : 2.5em;
-        line-height: 40px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    :root {
-        --main-max-width:85%;
-    }
-
-    h1 {
-        padding-left: 20px;
-        font-size: 1.5em;
-    }
-
+    
     #content-header {
         display: flex;
         flex-direction: column;
-        height: 150px;
-        padding-bottom: 0px;
+        width: 100%;
+        height: 250px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #logo-header {
+        flex: 10%;
+        height: 220px;
     }
 
     #logo-titre {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        height: 75%;
+        flex:75%;
+        line-height: 0;
+    }
+
+    #logo-titre h1 {
+        flex: 90%;
+        padding-left: 20px;
+        font-size: 5.5em;
     }
 
     nav {
         display: flex;
         flex-direction: row;
         justify-content:end;
+        flex:25%;
+        width: 95%;
+        height: 25%;
+        line-height: 0px;
+    }
+    nav a {
+        font-size: 4.3em;
+
+    }
+
+    #inscription {
+        padding-left: 40px;
+    }
+
+    #content-body-home {
+        height: 3600px;
+    }
+
+    section h2 {
+        font-size: 4em;
+        margin-bottom: 40px;
+    }
+    section p {
+        font-size:3.5em;
+    }
+    
+    #first-section {
+        margin-top: 100px;
+        padding-bottom: 370px;
+    }
+
+    #phone-div {
+        position: absolute;
+        top:700px;
+        height: 600px;
+    }
+
+    #second-section {
+        position: absolute;
+        top: 1350px;
+
+    }
+    
+    #third-section {
+        position: absolute;
+        top: 2200px;
+    }
+    
+    #fourth-section {
+        position: absolute;
+        top: 3050px;
+    }
+
+    footer ul {
+        font-size: 3.5em;
+        line-height: 80px;
+    }
+
+    #logo-body {
+        height: 250px;
+    }
+    
+    .legal-text {
+        margin-top: 70px;
+        font-size: 4em;
+        line-height: 40px;
+    }
+
+    .legal-text h2 {
+        font-size: 1em;
+    }
+
+    .legal-text h3 {
+        font-size: 1.2em;
+    }
+
+    .titre-page {
+        font-size: 5em;
+    }
+    
+    input {
+        width: 75%;
+        height: 70px;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+    
+    textarea {
+        width: 75%;
+        height: 350px;
+        font-size: 3em; 
+    }
+    
+    label {
+        padding-left: 12%;
+        line-height: 0px;
+        font-size: 3.7em;
+        font-weight: bold;
+
+    }
+    
+    .principal {
+        font-size: 4em;
+        height: 90px;
+        width: 350px;
+    }
+    
+    .secondary {
+        font-size: 4em;
+        height: 90px;
+        width: 350px;
+    }
+}
+
+/*Affichage portrait tablettes haute résolution*/
+@media screen and (max-width: 1400px) {
+    :root {
+        --main-max-width: 85%;
+    }
+    
+    h2 {
+        font-size: 2em;
+    }
+    
+    h3 {
+        font-size: 2.5em;
+    }
+    
+    #content-header {
+        display: flex;
+        flex-direction: column;
         width: 100%;
+        height: 160px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    #logo-header {
+        flex: 10%;
+        height: 150px;
+    }
+
+    #logo-titre {
+        flex: 75%;
+        line-height: 0;
+    }
+
+    #logo-titre h1 {
+        flex: 90%;
+        padding-left: 20px;
+        font-size: 3em;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content:end;
+        flex:25%;
+        width: 95%;
         height: 25%;
         line-height: 0px;
     }
 
     nav a {
-        margin-left: 10px;
+        font-size: 3.3em;
+        padding-left: 10px;
     }
 
     #content-body-home {
-        width: var(--main-max-width);
-        height: 1850px;
-        margin-left: auto;
-        margin-right: auto;
+        height: 3600px;
     }
 
-    section {
-        width: var(--main-max-width);
+    section h2 {
+        font-size: 4em;
+        margin-bottom: 40px;
     }
-
-    section h1 {
-        padding-top:20px;
-        font-size: 2em;
-        line-height: 40px;
-    }
-
     section p {
-        margin: 0px;
-        padding-top: 25px;
-        color: white;
-        font-size : 1.5em;
-        line-height: 25px;
+        font-size:3.5em;
     }
-
+    
     #first-section {
-        margin-top: 30px;
-        padding-bottom: 170px;
+        margin-top: 100px;
     }
 
     #phone-div {
-        top: 400px;
-        height: 300px;
+        position: absolute;
+        top:700px;
+        height: 600px;
     }
 
     #second-section {
-        top: 680px;
+        position: absolute;
+        top: 1300px;
     }
-
+    
     #third-section {
-        top: 1130px;
+        position: absolute;
+        top: 2100px;
+    }
+    
+    #fourth-section {
+        position: absolute;
+        top: 2900px;
     }
 
+    #badges {
+        width: 70%;
+        margin-bottom: 60px;
+    }
+
+    footer ul {
+        font-size: 3.5em;
+        line-height: 80px;
+    }
+
+    #social-network {
+        padding-right: 0px;
+    }
+
+    #social-network a {
+        padding-left: 20px;
+    }
+
+    .legal-text {
+        font-size: 3em;
+        line-height: 40px;
+    }
+
+    .legal-text h2 {
+        font-size: 1em;
+    }
+
+    .legal-text h3 {
+        font-size: 1.2em;
+    }
+
+    .titre-page {
+        font-size: 5em;
+        line-height: 70px;
+    }
+}
+
+/* Affichage tablettes base résolution portrait et smartphone paysage*/
+@media screen and (max-width: 1100px) {
+    :root {
+        --main-max-width: 85%;
+    }
+    
+    h2 {
+        font-size: 2em;
+    }
+    
+    h3 {
+        font-size: 2.5em;
+    }
+    
+    #content-header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 130px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    #logo-header {
+        flex: 10%;
+        height: 120px;
+    }
+
+    #logo-titre {
+        flex: 75%;
+        line-height: 0;
+    }
+
+    #logo-titre h1 {
+        flex: 90%;
+        padding-left: 15px;
+        font-size: 2.5em;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content:end;
+        flex:25%;
+        width: 95%;
+        height: 25%;
+        line-height: 0px;
+    }
+
+    nav a {
+        font-size: 2.5em;
+        margin-left: 13px;
+    }
+    
+    #connexion {
+        padding-left: 10px;
+    }
+
+    #content-body-home {
+        height: 2800px;
+    }
+
+    section h2 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    section p {
+        font-size:2.5em;
+    }
+    
+    #first-section {
+        margin-top: 70px;
+        padding-bottom: 250px;
+    }
+
+    #phone-div {
+        position: absolute;
+        top:600px;
+        height: 400px;
+    }
+
+    #second-section {
+        position: absolute;
+        top: 1000px;
+    }
+    
+    #third-section {
+        position: absolute;
+        top: 1630px;
+    }
+    
     #fourth-section {
-        top: 1590px;
+        position: absolute;
+        top: 2300px;
     }
 
     .div-img-left {
-        max-height: 100px;
-        left: -7px;
+        max-height: 170px;
+        left: -15px;
     }
     
     .div-img-right {
-        max-height: 100px;
-        right: -7px;
+        max-height: 170px;
+        right: -15px;
     }
 
-    form  {
-        width:100%;
-        margin-bottom: 50px;
+    #badges {
+        width: 70%;
+        margin-bottom: 40px;
+    }
+    
+    #list-footer {
+        padding-left: 0;
+    }
+
+    footer ul {
+        font-size: 2.5em;
+        line-height: 70px;
+    }
+
+    #logo-body {
+        height: 170px;
+    }
+    
+    .legal-text {
+        margin-top: 40px;
+        font-size: 2em;
+        line-height: 30px;
+    }
+
+    .legal-text h2 {
+        font-size: 1em;
+    }
+
+    .legal-text h3 {
+        font-size: 1.2em;
+    }
+
+    .titre-page {
+        font-size: 3.5em;
     }
 
     input {
         width: 80%;
+        height: 40px;
+        font-size: 1.5em;
     }
-
+    
+    textarea {
+        width: 80%;
+        height: 200px;
+        font-size: 1.5em;
+    }
+    
     label {
         padding-left: 10%;
-    }
-
-    .legal-text {
-        width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    #content-footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: var(--main-max-width);
-        margin-left: auto;
-        margin-right: auto;
-        align-items: center;
-        background-color: #F55A4F;
-    }
-    
-    footer ul {
-        line-height: 30px;
-        font-size: 1.3em;
-        color: white;
-        list-style-type: none;
-    }
-    
-    footer a {
-        color: white;
+        line-height: 0px;
+        font-size: 2.8em;
         font-weight: bold;
-        text-decoration: none;
     }
     
-    #list-footer {
-        flex: 80%;
-        z-index: 10;
-        background-color: #6B9BFA;
+    .principal {
+        font-size: 3em;
+        height: 70px;
+        width: 300px;
     }
     
-    #social-network {
-        flex: 20%;
-        display: flex;
-        justify-content: space-around;
-        padding-right: 15px;
-        background-color:#FCA311 ;
+    .secondary {
+        font-size: 3em;
+        height: 70px;
+        width: 300px;
     }
-
 }
-@media screen and (max-width: 500px) {
-    #logo-titre h1 {
+
+/* Affichage tablettes base résolution portrait et smartphone paysage*/
+@media screen and (max-width: 767px) {
+    :root {
+        --main-max-width: 90%;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+    }
+    
+    h3 {
         font-size: 1.5em;
     }
 
-    #logo-header {
-        flex: 10%;
-        height: 80px;
+    #content-header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 110px;
+        padding-top: 5px;
+        padding-bottom: 0px;
     }
+
     nav {
         display: flex;
         flex-direction: row;
-        justify-content:space-around;
-        width: 100%;
+        justify-content:end;
+        width: 95%;
         height: 25%;
         line-height: 0px;
     }
 
     nav a {
-        font-size: 1.4em;
+        font-size: 2em;
+        margin-left: 13px;
+    }
+    
+    #inscription {
+        padding-left: 0px;
+    }
+
+    #logo-titre {
+        flex:75%;
+    }
+
+    #logo-header {
+        flex: 10%;
+        height: 70px;
+    }
+
+    #logo-titre h1 {
+        flex: 90%;
+        padding-left: 15px;
+        font-size: 1.8em;
+        line-height: 0px;
+    }
+
+    #content-body-home {
+        height: 2100px;
+    }
+
+    section h2 {
+        font-size: 2em;
+        margin-bottom: 0px;
+        line-height: 40px;
+    }
+
+    section p {
+        font-size:1.6em;
+        line-height: 25px;
+        padding-top: 20px;
+    }
+    
+    #first-section {
+        margin-top: 40px;
+        padding-bottom: 170px;
+    }
+
+    #phone-div {
+        position: absolute;
+        top: 440px;
+        height: 280px;
+    }
+
+    #second-section {
+        position: absolute;
+        top: 700px;
+    }
+    
+    #third-section {
+        position: absolute;
+        top: 1180px;
+    }
+    
+    #fourth-section {
+        position: absolute;
+        top: 1670px;
+    }
+
+    .div-img-left {
+        max-height: 110px;
+        left: -7px;
+    }
+    
+    .div-img-right {
+        max-height: 110px;
+        right: -7px;
+    }
+
+    #badges {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    #list-footer {
+        padding-left: 0;
+    }
+
+    footer ul {
+        font-size: 1.6em;
+        line-height: 40px;
+    }
+
+    #social-network {
+        padding-right: 0px;
+    }
+
+    #social-network a {
+        padding-left: 5px;
+    }
+
+    #social-network img {
+        height: 50px;
+    }
+
+    #logo-body {
+        height: 100px;
+        margin-bottom: 25px;
+    }
+    
+    .legal-text {
+        margin-top: 0px;
+        font-size: 1.5em;
+        line-height: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .legal-text h2 {
+        font-size: 0.79m;
+        line-height: 25px;
+    }
+
+    .legal-text h3 {
+        font-size: 1em;
+    }
+
+    .titre-page {
+        margin-bottom: 30px;
+        font-size: 2em;
+        line-height: 30px;
+    }
+
+    input {
+        width: 85%;
+        height: 30px;
+        font-size: 0.8em;
+    }
+    
+    textarea {
+        width: 85%;
+        height: 150px;
+        font-size: 1.1em;
+    }
+    
+    label {
+        padding-left: 7%;
+        line-height: 0px;
+        font-size: 1.7em;
+        font-weight: bold;
+
+    }
+    
+    .principal {
+        font-size: 1.7em;
+        height: 50px;
+        width: 200px;
+    }
+    
+    .secondary {
+        font-size: 1.7em;
+        height: 50px;
+        width: 200px;
     }
 }
